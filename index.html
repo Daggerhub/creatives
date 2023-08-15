@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creatives SPA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Creatives SPA</h1>
+    <h2>Filter</h2>
+    <div class="grid-container" id="filterControls">
+        <label for="titleFilter">Title Filter:</label>
+        <label for="colorFilter">Color</label>
+        <input style="width: fit-content;" placeholder="Search with title" type="text" id="titleFilter">
+        <fieldset id="colorFilter" class="colorbox" name="colorFilter">
+        </fieldset>    
+    </div>
+    <button id="removeFilters"  class="btn hidden">Remove Applied Filters</button>
+    <div class="container">
+        <div id="progressBarContainer">
+            <div id="progressBar"></div>
+        </div>
+        <div id="progressBarLable"></div>
+    </div>  
+    <button id="openDrawerBtn" class="btn">+ Add Creative</button>
+
+    <div id="drawer" class="">
+        <div class="drawerHeader">
+            <h2>Creative Creation</h2>
+            <button id="closeBtn">X</button>
+        </div>
+        <form id="addCreativeForm">
+            <div class="grid-container">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" placeholder="Enter Title" required>
+                <label for="subTitle">Sub-Title:</label>
+                <input type="text" id="subTitle" placeholder="Enter Sub-Title" name="subTitle">
+            </div>
+            <fieldset class="colorbox" id="bgColor" name="bgColor">
+                <legend>Bg color</legend>
+            </fieldset>
+
+            <button disabled class="btn" id="submitbtn" type="submit">Done</button>
+        </form>
+    </div>
+
+    <div id="creativeList">
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

@@ -77,7 +77,7 @@ function applyFilters() {
     const selectedColorRadio = document.querySelector('input[name="colorFilter"]:checked');
     const colorFilter = selectedColorRadio ? selectedColorRadio.value : "";    
     const filteredCreatives = creatives.filter((creative) => {
-        const titleMatches = creative.title.toLowerCase().includes(titleFilter);
+        const titleMatches = creative.title.toLowerCase().includes(titleFilter) || creative.subTitle.toLowerCase().includes(titleFilter);
         const colorMatches = colorFilter === "" || creative.bgColor === colorFilter;
         return colorMatches && titleMatches;
     });
@@ -97,7 +97,7 @@ function updateAddButtonState() {
 }
 
 function updateProgressBar() {
-    progressBarLable.innerHTML = `${creatives.length}/5`
+    progressBarLable.innerHTML = `${creatives.length} / 5`
     const progressPercentage = (creatives.length / 5) * 100;
     progressBar.style.width = `${progressPercentage}%`;
 }

@@ -10,37 +10,40 @@
     <h1>Creatives SPA</h1>
     <h2>Filter</h2>
     <div class="grid-container" id="filterControls">
-        <label for="titleFilter">Title Filter:</label>
         <label for="colorFilter">Color</label>
-        <input style="width: fit-content;" placeholder="Search with title" type="text" id="titleFilter">
+        <label for="titleFilter">Title/Subtitle:</label>
         <fieldset id="colorFilter" class="colorbox" name="colorFilter">
         </fieldset>    
+        <input style="width: fit-content;" placeholder="Search with title/subtitle" type="text" id="titleFilter">
     </div>
     <button id="removeFilters"  class="btn hidden">Remove Applied Filters</button>
     <div class="container">
         <div id="progressBarContainer">
             <div id="progressBar"></div>
         </div>
-        <div id="progressBarLable"></div>
+        <div id="progressBarLable">0 / 5 Creatives</div>
     </div>  
     <button id="openDrawerBtn" class="btn">+ Add Creative</button>
 
     <div id="drawer" class="">
         <div class="drawerHeader">
             <h2>Creative Creation</h2>
-            <button id="closeBtn">X</button>
+            <button style="font-size: 24px; border: none; cursor: pointer;" id="closeBtn">X</button>
         </div>
         <form id="addCreativeForm">
-            <div class="grid-container">
-                <label for="title">Title:</label>
-                <input type="text" id="title" name="title" placeholder="Enter Title" required>
-                <label for="subTitle">Sub-Title:</label>
-                <input type="text" id="subTitle" placeholder="Enter Sub-Title" name="subTitle">
+            <div style="display: flex; flex-direction: column; gap: 48px;">
+                <div class="flexCol">
+                    <label for="title">Title:</label>
+                    <input class="inputBox" type="text" id="title" name="title" placeholder="Enter Title" required>
+                </div>
+                <div class="flexCol">
+                    <label for="subTitle">Sub-Title:</label>
+                    <input class="inputBox" type="text" id="subTitle" placeholder="Enter Sub-Title" name="subTitle">
+                </div>
+                <fieldset class="colorbox" id="bgColor" name="bgColor">
+                    <legend>Bg color</legend>
+                </fieldset>
             </div>
-            <fieldset class="colorbox" id="bgColor" name="bgColor">
-                <legend>Bg color</legend>
-            </fieldset>
-
             <button disabled class="btn" id="submitbtn" type="submit">Done</button>
         </form>
     </div>

@@ -9,11 +9,9 @@ h1 {
 }
 
 .btn{
-  padding: 8px 12px;
-  background-color: #e2e2e2;
+  padding: 8px 16px;
+  background-color: #ffffff;
   margin: 20px 0;
-  border: none;
-  border-radius: 6px;
   width: fit-content;
   cursor: pointer;
 }
@@ -41,9 +39,9 @@ h1 {
 #drawer {
   width: 400px;
   background-color: #f4f4f4;
-  padding: 20px;
+  padding: 32px;
   position: fixed;
-  right: -440px;
+  right: -464px;
   top: 0;
   height: 100%;
   transition: right 0.3s;
@@ -58,7 +56,8 @@ h1 {
 #addCreativeForm{
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  justify-content: space-between;
+  height: calc(100% - 200px);
 }
 
 #drawer.open {
@@ -73,14 +72,14 @@ h1 {
 .creative {
   border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 10px;
+  padding: 16px;
   margin-top: 10px;
-  width: 200px;
+  width: 320px;
   text-align: center;
 }
 
 #progressBarContainer {
-  width: 400px;
+  width: 360px;
   overflow: hidden;
   border-radius: 8px;
   background-color: #ddd;
@@ -95,12 +94,12 @@ h1 {
 }
 
 .container{
-  margin-top: 16px;
+  margin-top: 32px;
   width: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 32px;
 }
 
 input[type="radio"] {
@@ -116,4 +115,14 @@ input[type="radio"] {
 
 input[type="radio"]:checked {
   border-color: #000000;
+}
+
+.flexCol{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputBox{
+  padding: 4px 8px;
 }
